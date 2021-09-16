@@ -1,0 +1,145 @@
+/**
+Creation des variables de css
+ */
+:root{
+    --bg: #000029;
+    --font-color: #ededff;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+
+/**
+  Deffinition des element principeau
+  -body
+  -h1
+  -h2
+  -h3
+  -h4
+  -a
+  -p
+ */
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--font-color);
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+h1{
+    font-size: 8rem;
+    line-height: 1;
+    font-weight: 800;
+    font-style: normal;
+}
+
+h2{
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+h3{
+    font-size: 1.75rem;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+h4{
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+p{
+    text-align: justify;
+}
+
+/**
+    Definition des classes principal
+ */
+
+.title-with-separator{
+    position: relative;
+    padding-bottom: 1.75rem;
+    margin-bottom: 2rem;
+}
+.title-with-separator::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 6rem;
+    border-bottom: 2px solid var(--font-color);
+}
+
+.weighty{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.big-section {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.section-title{
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+.section-body {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.section-footer {
+    padding-bottom: 1.5rem;
+}
+
+.grid-container-2c{
+    display: grid;
+    grid-template-columns: repeat(2, 50% [col-start]);
+    width: 100%;
+}
+
+.full{
+    width: 100vw;
+}
+
+.column-list {
+    columns: 10rem;
+}
+/**
+    Definition element en particulier
+ */
+#page-container{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+#profile_pict{
+    aspect-ratio: 1/1;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    border: solid var(--font-color) 5px;
+}
