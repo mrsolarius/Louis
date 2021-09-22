@@ -1,3 +1,7 @@
+/**
+ * Ce fichier permet de crée une animation de scroll entre un lien et une ancre
+ */
+
 // Initialisation de nos boutons - crée un event listener sur le cliques de tous elements ayant pour class anchor-link
 function init(){
     const anchorLinks = document.getElementsByClassName("anchor-link");
