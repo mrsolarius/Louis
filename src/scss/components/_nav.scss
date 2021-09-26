@@ -1,0 +1,71 @@
+@mixin lineBefore ($size,$color){
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-right: $size solid $color;
+  transition: transform .15s ease-in-out,-webkit-transform .15s ease-in-out;
+}
+
+#sections-nav-container{
+  z-index: 1400;
+  //@todo : Mettre en place une mixim de calcule de la largeur
+  left: 1000px;
+  display: block;
+  top: 5rem;
+  position: fixed;
+
+  .section-nav-list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 0;
+
+    &:before {
+      @include lineBefore(1px,var(--color-inactive));
+    }
+
+    .sections-nav-item{
+
+      a {
+        text-decoration: none;
+        padding-left: 2rem;
+      }
+
+      .nav-link {
+        display: block;
+        position: relative;
+        padding-top: .375rem;
+        padding-bottom: .375rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all .15s ease-in-out;
+        color: var(--color-inactive);
+
+        &:not(.active):hover{
+          color: var(--color-font);
+          &:before {
+            transform: scaleX(1);
+          }
+        }
+
+        &.active {
+          color: var(--color-primary);
+          &:before {
+            @include lineBefore(2px, var(--color-primary));
+            transform: scaleY(1);
+          }
+        }
+
+        &:before{
+          @include lineBefore(2px, var(--color-font));
+          transform: scaleY(0);
+        }
+      }
+    }
+  }
+}
