@@ -3,16 +3,14 @@
  */
 
 // Initialisation de nos boutons - crée un event listener sur le cliques de tous elements ayant pour class anchor-link
-function init() {
+window.addEventListener("load", ()=>{
     const anchorLinks: HTMLCollectionOf<Element> = document.getElementsByClassName("anchor-link");
     for (let anchorLink of anchorLinks) {
         anchorLink.addEventListener('click', () => {
             anchorLinkEvent(anchorLink)
         })
     }
-}
-
-window.addEventListener("load", init);
+});
 
 // Lancement de animation vers la cible -  Utilise le href de l'element actuel l'utilise comme id afin de lancer l'animation vers l'element cible
 // Cette fonction doit être appeler depuis un eventListener l'element doit aussi disposer être le lien d'une ancre
