@@ -30,7 +30,7 @@
 
     .sections-nav-item{
 
-      a {
+      & > :only-child {
         text-decoration: none;
         padding-left: 2rem;
       }
@@ -65,6 +65,10 @@
           @include lineBefore(2px, var(--color-font));
           transform: scaleY(0);
         }
+      }
+
+      .sections-nav-info{
+        padding-top: 3rem;
       }
     }
   }
