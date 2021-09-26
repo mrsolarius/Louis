@@ -11,9 +11,9 @@
 @import "default";
 
 //Importation des composant de la page
-@import "components/titles";
-@import "components/specific";
 @import "components/section";
+@import "components/specific";
+@import "components/titles";
 
 //Importation des composant utils
 @import "utils/flow";
