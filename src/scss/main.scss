@@ -2,7 +2,7 @@
 /*
  * Import modern css rester https://github.com/necolas/normalize.css
  */
-@import "/node_modules/normalize.css/normalize.css";
+@import url('https://necolas.github.io/normalize.css/latest/normalize.css');
 
 //Importations des variables scss
 @import "vars";
@@ -14,10 +14,6 @@
 @import "components/titles";
 @import "components/specific";
 @import "components/section";
-@import "components/nav";
-@import "components/page-foundery";
-@import "components/burger-animation";
-@import "components/lists";
+
 //Importation des composant utils
 @import "utils/flow";
-@import "utils/flex";

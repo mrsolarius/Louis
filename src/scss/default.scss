@@ -14,15 +14,6 @@ body{
   color: var(--color-font);
   text-align: left;
 }
-a {
-  text-decoration: none;
-  background-color: rgba(0,0,0,0);
-  color: var(--color-inactive);
-  transition: color ease-in-out 0.2s;
-  &:hover{
-    color: var(--color-primary);
-  }
-}
 
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;
@@ -56,36 +47,4 @@ h4{
 
 p{
   text-align: justify;
-}
-
-@media screen and (max-width: $breakpoint-lg){
-  h1{
-    font-size: 6rem;
-  }
-
-  h2{
-    font-size: 3rem;
-  }
-}
-
-@media screen and (max-width: $breakpoint-md){
-  h1{
-    font-size: 4rem;
-  }
-
-  h2{
-    font-size: 2rem;
-  }
-
-  h3{
-    font-size: .875rem;
-  }
-
-  h4{
-    font-size: .6rem;
-  }
-
-  p{
-    font-size: 1rem;
-  }
 }

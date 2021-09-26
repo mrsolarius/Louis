@@ -22,19 +22,19 @@ class TabsGroup extends HTMLElement {
             activeTabIndex: -1,
             maxIndex: 0
         };
-        this.connectedCallback()
+        this.connectedCallback().then()
     }
 
-    connectedCallback() {
+    async connectedCallback(): Promise<void> {
         this.initialTriggers = [...this.querySelectorAll('[data-element="trigger"]')];
         this.initialArticles = [...this.querySelectorAll('[data-element="article"]')];
 
         // Lancement du rendu pour transformer les element html
-        this.render()
+        await this.render();
     }
 
     // Generation des nouveau composant html en rendu dans le shadow root
-    render() {
+    async render(): Promise<void> {
 
         const trigger = (text: any, index: number) => {
             return `<button class="tabs-button" data-index="${index}" data-element="trigger-button" role="tab">${text}</button>`;

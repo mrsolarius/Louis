@@ -7,7 +7,6 @@
   --color-primary: #F18F01;
   --font-base: Montserrat, sans-serif;
   --flow-rhythm: 1.5rem;
-  --card-border: min(3vmax, 20px);
 }
 
 $breakpoint-xs: 0;
@@ -15,8 +14,3 @@ $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
-$breakpoint-xxl: 1920px;
-
-$nav-width:250px;
-$nav-transition:all 600ms cubic-bezier(0.4, 0, 0.2, 1);
-$nav-margin:5rem;

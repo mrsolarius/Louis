@@ -1,24 +1,28 @@
 /**
  * Ce fichier permet de crée une animation de scroll entre un lien et une ancre
  */
-import {easing} from "./utils/easing";
-import {getElementY, getLikedElementFromLink} from "./utils/scrollUtils";
 
 // Initialisation de nos boutons - crée un event listener sur le cliques de tous elements ayant pour class anchor-link
-window.addEventListener("load", ()=>{
+function init() {
     const anchorLinks: HTMLCollectionOf<Element> = document.getElementsByClassName("anchor-link");
     for (let anchorLink of anchorLinks) {
         anchorLink.addEventListener('click', () => {
             anchorLinkEvent(anchorLink)
         })
     }
-});
+}
+
+window.addEventListener("load", init);
 
 // Lancement de animation vers la cible -  Utilise le href de l'element actuel l'utilise comme id afin de lancer l'animation vers l'element cible
 // Cette fonction doit être appeler depuis un eventListener l'element doit aussi disposer être le lien d'une ancre
 function anchorLinkEvent(e: Element) {
     // Ici le this represent l'attribue cliquer
-    const target = getLikedElementFromLink(e)
+    const href = e.getAttribute("href")
+    if (href === null) throw new Error("href can't be null")
+    if (!href.startsWith('#')) throw new Error("This link does not refer to an anchor")
+    const target = document.querySelector(href)
+    if (!target) throw new Error(href + " does not refer to an existing anchor")
     scrollToTarget(target, 1000);
 }
 
@@ -47,4 +51,15 @@ function scrollToTarget(element: Element, duration: number) {
             window.requestAnimationFrame(step);
         }
     })
+}
+
+// Récupération de la position Y - Renvoie la positon y relative à la position du curseur sur la page
+function getElementY(element: Element): number {
+    return window.scrollY + element.getBoundingClientRect().top
+}
+
+// Fonction de transition entre [0,1] : easeInOutCubic
+// Récupérer ici : https://gist.github.com/gre/1650294
+function easing(t: number): number {
+    return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
 }
