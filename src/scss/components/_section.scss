@@ -1,0 +1,25 @@
+/*
+ * Definition des sections
+ */
+.big-section {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.section-title{
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+
+.section-body {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section-footer {
+  padding-bottom: 1.5rem;
+}

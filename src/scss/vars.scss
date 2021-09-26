@@ -1,0 +1,16 @@
+:root{
+  --color-bg: #000029;
+  --color-bg-lighter: #000080;
+  --color-shadows: #000309;
+  --color-inactive: rgba(237, 237, 255, 0.63);
+  --color-font:  rgb(237, 237, 255);
+  --color-primary: #F18F01;
+  --font-base: Montserrat, sans-serif;
+  --flow-rhythm: 1.5rem;
+}
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

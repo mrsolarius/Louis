@@ -1,0 +1,17 @@
+/**
+ * Gestion du flow
+ */
+.flow {
+    --flow-space: var(--flow-rhythm);
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space);
+}
+
+/**
+ * Flow de la balise custom
+ */
+tabs-group > * {
+    --flow-space: 2rem;
+}
