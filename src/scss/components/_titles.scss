@@ -1,18 +1,19 @@
 /*
  * Definitions des titres
  */
-.title-with-separator{
+.title-with-separator {
   position: relative;
   padding-bottom: 1.75rem;
   margin-bottom: 2rem;
-}
-.title-with-separator::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1rem;
-  width: 6rem;
-  border-bottom: 2px solid var(--color-primary);
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 6rem;
+    border-bottom: 2px solid var(--color-primary);
+  }
 }
 
 .weighty{
