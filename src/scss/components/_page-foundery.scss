@@ -1,0 +1,49 @@
+@import "../vars";
+
+#page-container{
+  display: flex;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: 5rem;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  &:only-child{
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .content{
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    &:only-child{
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .content{
+    &:only-child{
+      flex: 0 0 95%;
+      max-width: 95%;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .content{
+    &:only-child{
+      flex: none;
+      max-width: 100%;
+    }
+  }
+}
