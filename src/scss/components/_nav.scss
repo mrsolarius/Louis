@@ -12,10 +12,11 @@
 #sections-nav-container{
   z-index: 1400;
   //@todo : Mettre en place une mixim de calcule de la largeur
-  left: 1000px;
+  right: 5rem;
   display: block;
   top: 5rem;
   position: fixed;
+  background-color: var(--color-bg);
 
   .section-nav-list{
     display: flex;
