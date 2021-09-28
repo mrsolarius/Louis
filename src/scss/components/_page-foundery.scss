@@ -2,39 +2,33 @@
 
 #page-container{
   display: flex;
+  transform: translateX(0);
+  transition: $nav-transition;
 }
 .content{
   display: flex;
   flex-direction: column;
   margin-right: auto;
-  margin-left: 5rem;
   padding-right: 30px;
   padding-left: 30px;
-
-  &:only-child{
-    flex: 0 0 75%;
-    max-width: 75%;
-  }
+  max-width: calc(100% - #{$nav-width} - #{$nav-margin});
 }
 
 @media screen and (max-width: $breakpoint-lg) {
   .content{
-    margin-left: auto;
     padding-right: 30px;
     padding-left: 30px;
-
-    &:only-child{
-      flex: 0 0 80%;
-      max-width: 80%;
-    }
   }
 }
 
 @media screen and (max-width: $breakpoint-md) {
   .content{
-    &:only-child{
-      flex: 0 0 95%;
-      max-width: 95%;
+    max-width: none;
+  }
+
+  .sections-nav-container.nav-open{
+    &+#page-container {
+      transform: translateX(calc(calc(#{$nav-width}*-1) - #{$nav-margin}));
     }
   }
 }
