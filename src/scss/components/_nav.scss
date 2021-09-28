@@ -1,3 +1,5 @@
+@import "../vars";
+
 @mixin lineBefore ($size,$color){
   content: "";
   position: absolute;
@@ -9,15 +11,16 @@
   transition: transform .15s ease-in-out,-webkit-transform .15s ease-in-out;
 }
 
-#sections-nav-container{
+.sections-nav-container{
   z-index: 1400;
-  //@todo : Mettre en place une mixim de calcule de la largeur
-  right: 5rem;
+  right: 0;
+  width: $nav-width;
   display: block;
   top: 5rem;
   position: fixed;
   background-color: var(--color-bg);
-
+  transition: $nav-transition;
+  transform: translateX(-$nav-margin);
   .section-nav-list{
     display: flex;
     flex-direction: column;
@@ -71,6 +74,30 @@
       .sections-nav-info{
         padding-top: 3rem;
       }
+    }
+  }
+}
+.responsive-burger{
+  display:none;
+  position: fixed;
+  width: 100vw;
+  z-index: 10000;
+
+  .button-nav-menu{
+    margin-left: auto;
+    margin-top: .2rem;
+    margin-right: .5rem;
+  }
+}
+@media screen and (max-width: $breakpoint-md) {
+  .responsive-burger{
+    display: flex;
+  }
+  .sections-nav-container{
+    transform: translateX($nav-width);
+
+    &.nav-open{
+      transform: translateX(-$nav-margin);
     }
   }
 }
