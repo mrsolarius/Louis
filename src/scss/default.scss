@@ -53,7 +53,17 @@ p{
   text-align: justify;
 }
 
-@media screen and (max-width: $breakpoint-sm){
+@media screen and (max-width: $breakpoint-lg){
+  h1{
+    font-size: 6rem;
+  }
+
+  h2{
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md){
   h1{
     font-size: 4rem;
   }
