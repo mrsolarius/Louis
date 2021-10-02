@@ -2,7 +2,7 @@
 /*
  * Import modern css rester https://github.com/necolas/normalize.css
  */
-@import url('https://necolas.github.io/normalize.css/latest/normalize.css');
+@import "/node_modules/normalize.css/normalize.css";
 
 //Importations des variables scss
 @import "vars";
