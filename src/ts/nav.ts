@@ -1,4 +1,4 @@
-import {getElementY} from "./utils/scrollUtils";
+import {getLikedElementFromLink} from "./utils/scrollUtils";
 
 window.addEventListener('load', ()=>{
     const navLinks: HTMLCollectionOf<Element> = document.getElementsByClassName("nav-link");
@@ -17,10 +17,27 @@ window.addEventListener('load', ()=>{
 });
 
 function initAutoActive(navLinks: HTMLCollectionOf<Element>){
+    let sections: Element[] = [];
+    for (const navLink of navLinks) {
+        sections.push(getLikedElementFromLink(navLink))
+    }
     window.onscroll = function () {
+        let current='';
+        for (const section of sections) {
+            const sectionTop = section.getBoundingClientRect().top;
+            const sectionHeight = section.clientHeight;
+            //console.log(`Windows : ${window.scrollY} ${section.getAttribute("id")} : top${sectionTop} height${sectionHeight}`)
+            if (window.scrollY >= (sectionTop - sectionHeight / 5)){
+                const id = section.getAttribute('id')
+                if (id!==null) current = id
+            }
+        }
         for (const navLink of navLinks) {
-            // @ts-ignore
-            console.log(`Windows : ${window.scrollY} ${navLink}: ${getElementY(navLink)}`)
+            if (navLink.getAttribute("href")?.substr(1,current.length)===current){
+                navLink.classList.add('active');
+            }else{
+                navLink.classList.remove('active');
+            }
         }
     };
 }
