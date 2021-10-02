@@ -87,10 +87,6 @@
     margin-top: 0;
   }
 
-  & > * {
-    max-width: 50ch;
-  }
-
   &:focus {
     outline: 1px solid var(--color-inactive);
   }

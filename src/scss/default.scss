@@ -52,3 +52,35 @@ h4{
 p{
   text-align: justify;
 }
+
+@media screen and (max-width: $breakpoint-lg){
+  h1{
+    font-size: 6rem;
+  }
+
+  h2{
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md){
+  h1{
+    font-size: 4rem;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+
+  h3{
+    font-size: .875rem;
+  }
+
+  h4{
+    font-size: .6rem;
+  }
+
+  p{
+    font-size: 1rem;
+  }
+}
