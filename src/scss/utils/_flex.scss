@@ -1,0 +1,17 @@
+.flex-array{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.array-element{
+  width: calc(80% / 4);
+
+  @media (max-width: $breakpoint-sm) {
+    width: 90%;
+  }
+
+  @media (max-width: $breakpoint-xxl) {
+    width: calc(80% / 2);
+  }
+}

@@ -1,0 +1,17 @@
+.column-list{
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.max-section{
+  width: 100%;
+}
+
+.inline-flex{
+  display: flex;
+  flex-direction: row;
+}
