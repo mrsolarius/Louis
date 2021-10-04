@@ -40,7 +40,7 @@
   .heading,
   .explanation {
     background: var(--color-primary);
-    box-shadow: 0 0 0 1px var(--color-primary); //crapfixing that ugly pixel on chrome
+    box-shadow: 0 0 0 1px var(--color-primary);
   }
 
   &:before,
