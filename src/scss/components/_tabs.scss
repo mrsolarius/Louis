@@ -79,6 +79,7 @@
     opacity: 1;
     transform: none;
     transition-delay: 200ms;
+    width: 100%;
   }
 
   & p:first-of-type {
@@ -112,3 +113,7 @@
   }
 
 }
+
+@import "lists";
+@import "card";
+@import "../utils/flex";
