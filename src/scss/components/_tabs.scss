@@ -53,11 +53,12 @@
   }
 
   &:hover {
-    border-bottom: 2px solid var(--color-inactive);
+    color: var(--color-font);
+    border-bottom: 2px solid var(--color-font);
   }
 
   &[aria-selected='true'] {
-    color: var(--color-font);
+    color: var(--color-primary);
     border-color: var(--color-primary);
   }
 }
@@ -115,5 +116,4 @@
 }
 
 @import "lists";
-@import "card";
 @import "../utils/flex";
