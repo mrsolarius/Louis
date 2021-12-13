@@ -9,6 +9,12 @@
 ```shell
 sudo npm i -g vite
 ```
+
+**Inisialiser le projet**
+```shell
+npm i
+````
+
 ### Utilisation
 
 #### Development
